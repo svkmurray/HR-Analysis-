@@ -1,0 +1,15 @@
+SELECT COUNT(Attrition) AS Attrition_count
+FROM employee_sales
+WHERE Attrition LIKE "%YES%;
+
+SELECT COUNT(Attrition) AS Non_Attrition_count
+FROM employee_sales
+WHERE Attrition LIKE "%NO%;
+
+SELECT AVG(MonthlyIncome) AS average_monthly_income, MIN(MonthlyIncome) AS min_monthly_income, MAX(MonthlyIncome) AS max_monthly_income)
+FROM employee_sales
+WHERE Attrition LIKE “%YES%”;
+
+SELECT AVG(MonthlyIncome) AS average_monthly_income, MIN(MonthlyIncome) AS min_monthly_income, MAX(MonthlyIncome) AS max_monthly_income)
+FROM employee_sales
+WHERE Attrition LIKE “%NO%”;
