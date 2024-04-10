@@ -1,0 +1,21 @@
+CREATE TABLE employee_sales
+(
+Attrition string,
+Department string,
+JobSatisfaction int,
+MonthlyIncome int,
+);
+INSERT OVERWRITE TABLE employee_sales
+SELECT Attrition, Department, JobSatisfaction, ROUND (MonthlyIncome / 1000) * AS rounded value
+FROM employee_sales;
+
+INSERT OVERWRITE TABLE employee_sales
+SELECT *
+FROM employee_sales
+WHERE Department LIKE "%Sales%";
+
+INSERT OVERWRITE TABLE employee_sales
+SELECT *
+FROM employee_sales
+ORDER BY JobSatisfaction DESC;
+
